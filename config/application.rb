@@ -10,6 +10,7 @@ module CalcSalary
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    config.autoload_paths += %W(#{config.root}/lib)
 
     config.generators do |g|
       g.template_engine :slim
