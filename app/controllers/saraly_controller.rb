@@ -6,5 +6,6 @@ class SaralyController < ApplicationController
   end
 
   def show
+
   end
 end
