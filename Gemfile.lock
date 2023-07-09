@@ -91,7 +91,6 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    holiday_jp (0.8.1)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
@@ -269,7 +268,6 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   capybara (>= 3.26)
-  holiday_jp
   html2slim
   jbuilder (~> 2.7)
   listen (~> 3.3)
