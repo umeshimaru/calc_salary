@@ -38,10 +38,18 @@ class Salary
   end 
   
   
-  def total_weekdays_salary
+  def calculate_weekday_salary_total
     @weekdays_goal * @weekday_working_days.length
   end 
+
+  def calculate_weekend_salary_total
+    @weekends_goal * @work_days_weekend.length
+  end 
   # byebug
+
+  def get_monthly_salary
+    calculate_weekday_salary_total + calculate_weekend_salary_total
+  end 
   
   end
   
