@@ -26,9 +26,10 @@ class Salary
      end
      
     end
+
     @weekday_working_days.shift(@holidays)
 
-    byebug
+    # byebug
 
 
   
@@ -37,12 +38,10 @@ class Salary
   end 
   
   
-  def a
-    # @weekday_working_days
-    @work_days_weekend
-  
+  def total_weekdays_salary
+    @weekdays_goal * @weekday_working_days.length
   end 
-  
+  # byebug
   
   end
   
