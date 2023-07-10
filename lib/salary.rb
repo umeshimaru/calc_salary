@@ -17,7 +17,7 @@ class Salary
 
 
     date_range.each do |date|
-     if  HolidaysModule.holiday?(date)
+     if weekdays.include?(date.strftime('%A')) && !HolidaysModule.holiday?(date)
       # 平日の中で祝日かどうか判定
       @weekday_working_days.push(date)
      else
@@ -35,7 +35,8 @@ class Salary
   
   
   def a
-    @weekday_working_days
+    # @weekday_working_days
+    @work_days_weekend
   
   end 
   
@@ -44,4 +45,4 @@ class Salary
   
 
   # && 否定の論理演算 
-  # weekdays.include?(date.strftime('%A')) &&
+  
