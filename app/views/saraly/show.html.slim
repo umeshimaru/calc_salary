@@ -1,7 +1,7 @@
-h1 Saraly#show
-p Find me in app/views/saraly/show.html.slim
+h1 = "あなたの#{@month}の給料予測"
+
 p 
-  = @salary.a
+  = "#{@salary.get_monthly_salary}円"
 
 
 
