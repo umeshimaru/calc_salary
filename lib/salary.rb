@@ -16,16 +16,19 @@ class Salary
     @work_days_weekend = []
 
 
+
     date_range.each do |date|
+      # 平日ならtrue土日（祝日含む）ならfalse
      if weekdays.include?(date.strftime('%A')) && !HolidaysModule.holiday?(date)
-      # 平日の中で祝日かどうか判定
       @weekday_working_days.push(date)
      else
       @work_days_weekend.push(date)
      end
-    #  byebug
+     
     end
+    @weekday_working_days.shift(@holidays)
 
+    byebug
 
 
   
