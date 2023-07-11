@@ -1,20 +1,27 @@
-@import "bootstrap";
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 
 /* universal */
 
-// html {
-//   overflow-y: scroll;
-// }
-
-// body {
-//   padding-top: 60px;
-// }
-
-.center {
-  text-align: center;
-}
 
 
+// home_page
+
+
+          html, body {
+            height: 100%;
+            margin: 0;
+          }
+          
+          .home_box {
+            text-align: center;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          
 
