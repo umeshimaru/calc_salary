@@ -1,19 +1,21 @@
-= form_with url:  saraly_show_path, method: :get, scope: :salary do |f|
 
-  .form-group
-    = f.label :month, '月'
-    = f.select :month, options_for_select(['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']), {}, class: 'form-control'
+.home_box 
+  = form_with url:  saraly_show_path, method: :get, scope: :salary  do |f|
 
-  .form-group
-    = f.label :weekdays, '平日の目標金額'
-    = f.number_field :weekdays, class: 'form-control'
+    .form-group
+      = f.label :month, '月'
+      = f.select :month, options_for_select(['1月', '2月', '3月', '4  月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月 ']), {}, class: 'form-control'
 
-  .form-group
-    = f.label :weekends, '土日祝の目標金額'
-    = f.number_field :weekends, class: 'form-control'
+    .form-group
+      = f.label :weekdays, '平日の目標金額'
+      = f.number_field :weekdays, class: 'form-control'
 
-  .form-group
-    = f.label :holidays, '休日日数'
-    = f.number_field :holidays, class: 'form-control'
+    .form-group
+      = f.label :weekends, '土日祝の目標金額'
+      = f.number_field :weekends, class: 'form-control'
 
-  = f.submit '送信', class: 'btn btn-primary'
+    .form-group
+      = f.label :holidays, '休日日数'
+      = f.number_field :holidays, class: 'form-control'
+
+    = f.submit '送信', class: 'btn btn-primary'
