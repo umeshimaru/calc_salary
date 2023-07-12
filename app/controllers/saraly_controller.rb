@@ -2,6 +2,7 @@ class SaralyController < ApplicationController
  
 
   def home
+    
   end
 
   def index
