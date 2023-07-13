@@ -14,8 +14,10 @@ RSpec.describe "Saralys", type: :system do
     fill_in 'salary[holidays]', with: '5'
     click_button '送信'
 
-    
 
+    @salary = Salary.new(@month,@weekdays_goal,@weekends_goal,@holidays)
+    @first_day_of_month = Date.new(2023,@month,1)
+    # expect(@salary.get_monthly_salary).to eq(@salary.calculate_weekend_salary_total + @salary.calculate_weekday_salary_total)
   end
   
 end
