@@ -24,6 +24,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 gem 'month', '~> 2.0'
+gem 'slim-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -46,7 +47,7 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rspec-rails'
   gem "factory_bot_rails"
-  gem 'slim-rails'
+  
   gem 'html2slim'
    gem 'awesome_print'
 
@@ -64,6 +65,7 @@ group :test do
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'launchy'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
