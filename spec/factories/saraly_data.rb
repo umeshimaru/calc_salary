@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :form_data do
+  factory :form_data , class: Salary do
     # フォームのフィールドに合わせた属性を定義します
     month  { 1 }
     weekdays { 4000 }
