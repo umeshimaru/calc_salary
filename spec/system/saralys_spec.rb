@@ -5,6 +5,15 @@ RSpec.describe "Saralys", type: :system do
     driven_by(:rack_test)
   end
 
+  let(:params) do
+    {
+      salary: {
+        month: '7',
+        weekdays: '4000',
+        weekends: '6000',
+        holidays: '5'
+      }
+    } end 
 
   it 'calulate my salary' do 
     visit saraly_index_path
@@ -14,8 +23,14 @@ RSpec.describe "Saralys", type: :system do
     fill_in 'salary[holidays]', with: '5'
     click_button '送信'
 
-    @salary = Salary.new(form_params )
-    expect(@salary.get_monthly_salary).to eq(@salary.calculate_weekend_salary_total + @salary.calculate_weekday_salary_total)
+    salary = Salary.new(params)
+    monthly_salary = salary.get_monthly_salary
+    expect(monthly_salary).to eq(salary.calculate_weekday_salary_total + salary.calculate_weekend_salary_total)
+
+ 
+    
+    # @salary = Salary.new(salary )
+    # expect(@salary.get_monthly_salary).to eq(@salary.calculate_weekend_salary_total + @salary.calculate_weekday_salary_total)
   end
-  
+
 end
