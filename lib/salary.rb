@@ -39,12 +39,13 @@ class Salary
     @weekday_working_days = []
     @work_days_weekend = []
 
+    #稼働日数の数を平日と土日（祝日含む）分ける
     date_range.each do |date|
-      # 平日ならtrue土日（祝日含む）ならfalse
+      # 平日ならtrueの処理土日（祝日含む）ならfalseに入る
      if weekdays.include?(date.strftime('%A')) && !HolidaysModule.holiday?(date) ? @weekday_working_days.push(date) : @work_days_weekend.push(date)
      end 
     end
-
+    #休みをひいた平日の稼働日数の計算
     @weekday_working_days.shift(@holidays)
   end
 end

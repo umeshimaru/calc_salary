@@ -14,8 +14,6 @@ RSpec.describe "Saralys", type: :system do
     fill_in 'salary[holidays]', with: '5'
     click_button '送信'
 
-    
-
     @salary = Salary.new(form_params )
     expect(@salary.get_monthly_salary).to eq(@salary.calculate_weekend_salary_total + @salary.calculate_weekday_salary_total)
   end
