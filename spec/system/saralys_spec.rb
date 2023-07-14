@@ -16,7 +16,7 @@ RSpec.describe "Saralys", type: :system do
 
     
 
-    @salary = Salary.new( 7,4000,6000, 5 )
+    @salary = Salary.new(form_params )
     expect(@salary.get_monthly_salary).to eq(@salary.calculate_weekend_salary_total + @salary.calculate_weekday_salary_total)
   end
   
