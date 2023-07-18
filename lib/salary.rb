@@ -31,7 +31,7 @@ class Salary
   end 
 
   def total_work_days
-    @first_day_of_month = Date.new(2023,@month,1)
+    @first_day_of_month = Date.new(2023,@month,1) 
     @end_of_month  = @first_day_of_month.end_of_month
     date_range = (@first_day_of_month..@end_of_month ).to_a
     weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
@@ -49,6 +49,12 @@ class Salary
     @weekday_working_days.shift(@holidays)
   end
 end
+
+# うらたくfeedback
+# ①Date.new(2023,@month,1)マジックナンバーがある
+#②weekdays.include?(date.strftime('%A')) && !HolidaysModule.holiday?(date)ここをまたメソッド化してif文の条件を短くわかりやすくする。できるだけコメントは使わない。
+# ③計算するメソッドを作る場合はcalを先頭につけて計算するメソッドだとわかるようにする。
+
   
 
   # && 否定の論理演算 
